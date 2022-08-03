@@ -1,3 +1,5 @@
+import React from 'react';
+import ReactBody from './components/content';
 import './css/App.css';
 
 function App() {
@@ -5,16 +7,15 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h2>
+        <h2 className='title'>
           React APi
         </h2>
       </header>
 
-      <div>
-        <h3>body</h3>
-      </div>
-    </div>
+      <ReactBody />
+
+    </div >
   );
 }
 
-export default App;
+export default React.memo(App);

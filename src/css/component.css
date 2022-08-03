@@ -1,0 +1,21 @@
+/* shared css */
+
+.mainDiv {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.keyDiv {
+    width: 25%;
+    margin: 0px;
+    text-align: left;
+}
+
+.valueDiv {
+    width: 70%;
+    margin: 0px;
+    text-align: right;
+}
