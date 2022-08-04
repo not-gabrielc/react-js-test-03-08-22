@@ -6,7 +6,6 @@ import './css/App.css';
 
 function App() {
   const [apiCall, setApiCall] = React.useState();
-  const [buttonClick, setButtonClick] = React.useState(false);
 
   React.useEffect(() => {
     fetchApi().then(f => {
@@ -27,34 +26,16 @@ function App() {
         </h2>
       </header>
 
-      <div className='showInfo'>
-        <button onClick={() => setButtonClick(!buttonClick)} >
-          {
-            !buttonClick ?
-              <b>Show Info</b>
-              :
-              <b>Close Info</b>
-          }
-        </button>
-      </div>
       {
-        buttonClick ?
-          <div className='widget'>
-            {
-              apiCall &&
-              <div className='childWidget'>
-                <IpAddress ip={apiCall.ip} />
-                <hr />
-                <Country country={apiCall.country} />
-              </div>
-            }
+        apiCall &&
+        <div className='widget'>
+          <div className='childWidget'>
+            <IpAddress ip={apiCall.ip} />
+            <hr />
+            <Country country={apiCall.country} />
           </div>
-          :
-          <p>
-            Click <b>Show Info</b> to open widget.
-          </p>
+        </div>
       }
-
     </div >
   );
 }

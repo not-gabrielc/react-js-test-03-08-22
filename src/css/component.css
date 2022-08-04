@@ -21,7 +21,14 @@
 
 
 /* country css */
-.image:before {
-    /* content: var(--urlLink); */
+.childCountry {
+    width: 60%;
+}
+
+.countryCss::after {
+    content: '';
     width: 10%;
+    background-image: url(https://countryflagsapi.com/svg/gb);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
