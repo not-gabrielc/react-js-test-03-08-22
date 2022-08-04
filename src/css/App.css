@@ -38,3 +38,7 @@
 .childWidget {
   padding: 10px;
 }
+
+.postButton {
+  text-align: right;
+}

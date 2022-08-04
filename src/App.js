@@ -3,6 +3,7 @@ import { fetchApi } from './components/api';
 import Country from './components/country';
 import IpAddress from './components/ip';
 import './css/App.css';
+// https://mockapi.io/projects/62ebb8e6705264f263dee408 used for mock endpoint
 
 function App() {
   const [apiCall, setApiCall] = React.useState();
@@ -24,7 +25,8 @@ function App() {
     const data = {
       IpAddress: apiCall.ip,
       Country: apiCall.country,
-      Flag: `https://countryflagsapi.com/svg/${apiCall.country}`
+      Flag: `https://countryflagsapi.com/svg/${apiCall.country}`,
+      extra: [1, 2, 3, 4]
     }
 
     const requestOptions = {
@@ -63,9 +65,9 @@ function App() {
             <IpAddress ip={apiCall.ip} />
             <hr />
             <Country country={apiCall.country} />
-
+            <hr />
             {/* send to the api */}
-            <div>
+            <div className='postButton' >
               <button
                 onClick={e => postInApi(e)}
               >
