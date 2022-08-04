@@ -15,7 +15,13 @@
 }
 
 .valueDiv {
-    width: 70%;
     margin: 0px;
     text-align: right;
+}
+
+
+/* country css */
+.image:before {
+    /* content: var(--urlLink); */
+    width: 10%;
 }
